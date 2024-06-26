@@ -1,7 +1,7 @@
-document.getElementById('flipToBack').addEventListener('click', function() {
-    document.querySelector('.card').classList.add('card-flipped');
+document.getElementById('showInfo').addEventListener('click', function() {
+    document.querySelector('.card').classList.add('show-info');
 });
 
-document.getElementById('flipToFront').addEventListener('click', function() {
-    document.querySelector('.card').classList.remove('card-flipped');
+document.getElementById('hideInfo').addEventListener('click', function() {
+    document.querySelector('.card').classList.remove('show-info');
 });
