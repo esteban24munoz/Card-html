@@ -77,9 +77,12 @@ body {
     color: #777;
 }
 
+.social-media a {
+    margin: 0 5px;
+}
+
 .social-media img {
     width: 30px;
-    margin: 0 5px;
 }
 
 button {
@@ -105,22 +108,23 @@ button:hover {
     height: 100%;
     background-color: rgba(0, 0, 0, 1);
     color: #fff;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
     transition: bottom 0.5s ease;
-    text-align: justify;
-
 }
 
-.more-info p {
-    font-size: clamp(0.8rem, 5vw, 1rem);
-    line-height: 1.7;
+.more-info h3{
+    text-align: center;
+}
+.more-info .info-btn{
+    text-align: center;
+}
+.more-info ul li{
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
 }
 
 .card.show-info .more-info {
     bottom: 0; /* Slide up to reveal */
-}
-
-.more-info .info-btn {
-    text-align: center;
 }
