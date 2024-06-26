@@ -8,34 +8,43 @@
 </head>
 <body>
     <div class="card">
-        <div class="header">
-            <img src="../assets/logo.png" alt="D'IMPACTO Logo" class="logo">
+        <div class="faceone">
+            <div class="header">
+            <img src="./assets/logo.png" alt="D'IMPACTO Logo" class="logo">
             <div class="bg-triangle">
-                <img src="../assets/bg-triangle.svg" alt="Triangle" class="triangle">
+                <img src="./assets/bg-triangle.svg" alt="Triangle" class="triangle">
             </div>
-        </div>
-        <div class="profile">
-            <img src="../assets/profile1.png" alt="Sucre Rivas" class="profile-pic">
-        </div>
-        <div class="details">
+            </div>
+            <div class="profile">
+            <img src="./assets/profile1.png" alt="Sucre Rivas" class="profile-pic">
+            </div>
+            <div class="details">
             <h1>SUCRE</h1>
             <h2>RIVAS</h2>
             <hr style="width: 60%;">
-            <p class="position">Gerente de Marketing</p>
+            <p class="position">Director comercial</p>
             <br>
             <div class="social-media">
-                <a href="https://wa.me/your-number" target="_blank" style="text-decoration: none;">
-                    <img src="../assets/whatsapp.png" alt="WhatsApp">
+                               <a onclick="shareOnWhatsApp()" style="cursor: pointer;">
+                    <img src="./assets/share.png" alt="Compartir">
+                </a>
+                <a href="https://wa.me/50585480778" target="_blank" style="text-decoration: none;">
+                    <img src="./assets/whatsapp.png" alt="WhatsApp">
                 </a>
                 <a href="https://www.linkedin.com/in/d-impacto-s-a-matagalpa-1a01512ab" target="_blank" style="text-decoration: none;">
-                    <img src="../assets/linkedin.png" alt="LinkedIn">
+                    <img src="./assets/linkedin.png" alt="LinkedIn">
                 </a>
-                <a href="https://www.instagram.com/dimpactosa?igsh=dW9td3Z0bzJiNnR0" target="_blank" style="text-decoration: none;">
-                    <img src="../assets/instagram.png" alt="Instagram">
+                <a href="https://www.instagram.com/sucrerivas_investment" target="_blank" style="text-decoration: none;">
+                    <img src="./assets/instagram.png" alt="Instagram">
+                </a>
+ 
+                <a href="./contact/sucre.vcf" download="sucre.vcf">
+                    <img src="./assets/contact.png" alt="Contacto">
                 </a>
             </div>
             <br>
-            <button id="showInfo">ACERCA DE MÍ</button>
+            <button onclick="toggleCard()"  id="showInfo">ACERCA DE MÍ</button>
+            </div>
         </div>
         <div class="more-info">
             <h3>Educación</h3>
@@ -56,11 +65,18 @@
                 <li>Me apasionan las ciencias, la caficultura, y el planteamiento de estrategias en el mercado nacional e internacional de nuestro café Nicaragüense ☕🇳🇮.</li>
             </ul>
             <div class="info-btn">
-            <button id="hideInfo">VOLVER</button>
+            <button onclick="toggleCard()" id="hideInfo">VOLVER</button>
         </div>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function shareOnWhatsApp(){
+            const message = encodeURIComponent("Te comparto mi tarjeta de presentación: https://www.dimpactoni.com/sucrerivas.html");  // Replace with your prewritten message
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
