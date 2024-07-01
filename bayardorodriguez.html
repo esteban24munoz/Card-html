@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="faceone">
+            <div class="header">
+            <img src="./assets/logo.png" alt="D'IMPACTO Logo" class="logo">
+            <div class="bg-triangle">
+                <img src="./assets/bg-triangle.svg" alt="Triangle" class="triangle">
+            </div>
+            </div>
+            <div class="profile">
+            <img src="./assets/bayardo.png" alt="Jose Angel" class="profile-pic">
+            </div>
+            <div class="details">
+            <h1>Bayardo José</h1>
+            <h2>Rodríguez Flores</h2>
+            <hr style="width: 60%;">
+            <p class="position">Representante Legal y Gerente general</p>
+            <br>
+            <div class="social-media">
+                               <a onclick="shareOnWhatsApp()" style="cursor: pointer;">
+                    <img src="./assets/share.png" alt="Compartir">
+                </a>
+                <a href="https://wa.me/50585480778" target="_blank" style="text-decoration: none;">
+                    <img src="./assets/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.linkedin.com/in/d-impacto-s-a-matagalpa-1a01512ab" target="_blank" style="text-decoration: none;">
+                    <img src="./assets/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.instagram.com/sucrerivas_investment" target="_blank" style="text-decoration: none;">
+                    <img src="./assets/instagram.png" alt="Instagram">
+                </a>
+ 
+                <a href="./contact/bayardo.vcf" download="bayardo.vcf">
+                    <img src="./assets/contact.png" alt="Contacto">
+                </a>
+            </div>
+            <br>
+            <button onclick="toggleCard()"  id="showInfo">ACERCA DE MÍ</button>
+            </div>
+        </div>
+        <div class="more-info">
+            <h3>Educación</h3>
+            <ul>
+                <li>Master en Administración de Empresas, Asesor y Consultor Empresarial, Posgrado en Gerencia Financiera, Posgrado en Gerencia de Operaciones Centrado en la Calidad, Posgrado Gerencia en Recursos Humanos, Gerencia en Mercadeo, Posgrado Especialidad en Administración del Crecimiento (INCAE).</li>
+            </ul>
+            <h3>Puesto</h3>
+            <ul>
+                <li>Representante Legal y Gerente general.</li>
+            </ul>
+            <h3>Intereses</h3>
+            <ul>
+                <li>Como Gerente general cuento con una amplia visión de negocio, sólida experiencia, resultados comprobables en la implementación de estrategias y operaciones para aumentar la productividad y rentabilidad, con habilidad y conocimiento especial en administración, finanzas y contable. Excelente capacidad de liderazgo, coordinación de equipos y resolución de problemas complejos, buscando siempre nuevos desafíos para seguir creciendo profesionalmente.</li>
+            </ul>
+            <div class="info-btn">
+            <button onclick="toggleCard()" id="hideInfo">VOLVER</button>
+        </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function shareOnWhatsApp(){
+            const message = encodeURIComponent("Te comparto mi tarjeta de presentación: https://www.dimpactoni.com/bayardorodriguez.html");  // Replace with your prewritten message
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
